@@ -35,6 +35,9 @@
       "home/*": [
         "./src/components/pages/home/*"
       ],
+      "newhome/*": [
+        "./src/components/pages/newhome/*"
+      ],
       "showcase/*": [
         "./src/components/pages/showcase/*"
       ],

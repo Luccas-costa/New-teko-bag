@@ -1,8 +1,14 @@
 import React from 'react'
 
-export default function Developed() {
+interface DevelopedProps {
+  color?: boolean
+}
+
+export default function Developed({ color }: DevelopedProps) {
   return (
-    <div className="flex h-[80px] items-center justify-around bg-zinc-200">
+    <div
+      className={`flex h-[80px] items-center justify-around ${color ? 'bg-[#2F2E0C]/5' : 'bg-zinc-200'}`}
+    >
       <div className="font-medium text-zinc-600">
         ©TekoBag All Rights Reserved.
       </div>

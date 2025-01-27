@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 
 // import Hero from 'home/hero'
@@ -23,6 +24,10 @@ import Testimonials from 'newhome/testimonials'
 import SliderPromotions from 'newhome/SliderPromotions'
 
 import IntroAnimationUse from 'ui/intro-tekobag/intro-animation-use'
+import Footer from '@/components/pages/home/footer'
+import Developed from '@/components/pages/home/developed'
+
+import calltoaction from '../../public/backgrounds/home/call-to-action.png'
 
 export default function Home() {
   const [isintro, setIsintro] = useState(true)
@@ -47,11 +52,35 @@ export default function Home() {
           <div style={{ zIndex: -1 }}>
             <Hero />
           </div>
+
           <Tutorial />
           <SliderPromotions />
           <Inspirations />
           <Testimonials />
-          {/* trocar a parte do quanto pode ganhar pela pessoas reais mais deixando as cores e depois pular o comece hoje mesmo 100% gratis e o footter so usar oq ja tem so mudar o bg */}
+
+          <div className="px-[105px]">
+            <div className="mx-auto mt-[40px] flex h-[500px] w-[100%] items-center justify-evenly rounded-3xl bg-[#AEFF6E]">
+              <div className="flex flex-col gap-[30px]">
+                <div className="text-[3.625rem] font-bold leading-[4.125rem] text-[#2F2E0C]">
+                  Compre sua <br /> Tekobag{"'"}s hoje
+                </div>
+                <button className="h-[50px] w-[120px] rounded-md bg-[#2F2E0C] text-lg text-white">
+                  Buscar
+                </button>
+              </div>
+              <div>
+                <Image
+                  src={calltoaction}
+                  width={450}
+                  height={450}
+                  alt="calltoaction"
+                />
+              </div>
+            </div>
+          </div>
+
+          <Footer />
+          <Developed color={true} />
         </div>
       )}
     </div>
